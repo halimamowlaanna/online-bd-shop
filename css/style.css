@@ -3,6 +3,9 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: rgb(235, 217, 235);
 }
+.bg-orange {
+  color: rgb(238, 115, 34);
+}
 .h-new {
   /* color: rgb(102, 6, 102); */
   color: rgb(113, 10, 179);
