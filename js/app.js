@@ -11,34 +11,33 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product d-flex flex-column justify-content-between ">
-      <div>
-    <img class="product-image" src=${product.image}></img>
+    div.innerHTML = `
+    <div class="single-product d-flex flex-column justify-content-between ">
+
+      <div class="pt-3 ">
+        <img class="product-image rounded" src=${product.image}></img>
       </div>
 
       <div>
-      <h3 class="fs-2">${product.title}</h3>
-      <p><span class="fw-bolder">Category: </span> ${product.category}</p>
-      <div class="text-center">
-      <span class="fw-bolder">Rating: </span>
-        <span style="text-color: #000 87%">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        </span><span>(${product.rating.rate})</span>
-      </div>
-      <div class="text-center">
-      <span class="fw-bolder">Reviews: </span> ${product.rating.count}
-      </div>
+        <h3 class="fs-2">${product.title}</h3>
+        <p><span class="fw-bolder">Category: </span> ${product.category}</p>
+        <div class="text-center">
+          <span class="fw-bolder">Rating: </span>
+          <span style="text-color: #000 87%">
+          <i class="fas fa-star text-warning"></i>
+          </span><span>${product.rating.rate}</span>
+        </div>
+        <div class="text-center">
+          <span class="fw-bolder">Reviews: </span> ${product.rating.count}
+        </div>
       </div>
 
       <div class="pb-3">
-      <h3>Price:<span class="bg-orange">$ ${product.price}</span></h3>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger ">Details</button></div>
+        <h3>Price:<span class="bg-orange">$ ${product.price}</span></h3>
+        <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+        <button id="details-btn" class="btn btn-danger ">Details</button>
       </div>
+    </div>
 
       `;
     document.getElementById("all-products").appendChild(div);

@@ -6,8 +6,7 @@ body {
 .bg-orange {
   color: rgb(238, 115, 34);
 }
-.h-new {
-  /* color: rgb(102, 6, 102); */
+.site-name {
   color: rgb(113, 10, 179);
 }
 #search-btn {
@@ -35,7 +34,7 @@ body {
   margin: 10px;
   height: 500px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: whitesmoke;
+  background-color: white;
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
