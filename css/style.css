@@ -1,29 +1,20 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  background-color: rgb(235, 217, 235);
 }
-.search-field {
-  border: none;
-  border-radius: 50px;
-  padding: 5px;
-  outline: none;
+.h-new {
+  /* color: rgb(102, 6, 102); */
+  color: rgb(113, 10, 179);
 }
-.search-field:hover {
-  outline: none;
-  border: none;
+#search-btn {
+  color: blueviolet;
+  border: 1px solid blueviolet;
+  width: 40px;
 }
-.search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 50px;
-  border-right: none;
-}
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
+#search-btn:hover {
+  color: white;
+  background-color: blueviolet;
 }
 #all-products {
   display: grid;
@@ -38,11 +29,17 @@ body {
 .single-product {
   padding: 10px;
   transition: 0.6s;
+  margin: 10px;
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: whitesmoke;
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
-  border: 1px solid cyan;
+  background-color: rgb(78, 42, 78);
+  border: 1px solid blueviolet;
+  color: white;
 }
 .product-image {
   width: 150px;
