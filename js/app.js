@@ -7,7 +7,7 @@ const loadProducts = () => {
 
 // show all product in UI 
 const showProducts = (products) => {
-  const allProducts = products.map((pd) => pd);
+  const allProducts = products.map(pd => pd);
   for (const product of allProducts) {
     const div = document.createElement("div");
     div.classList.add("product");
@@ -17,6 +17,16 @@ const showProducts = (products) => {
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
+      <div class="text-center">Rating
+        <span style="text-color: #000 87%">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        </span><span>(${product.rating.rate})</span>
+      </div>
+      <div class="text-center">Reviews : ${product.rating.count}</div>
       <h3>Price:<span class="bg-orange">$ ${product.price}</span></h3>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger ">Details</button></div>
